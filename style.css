@@ -1,0 +1,370 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('RobotoCondensed-VariableFont_wght.ttf');
+}
+body {
+    margin: 0;
+    font-family: 'Roboto';
+}
+
+.header::before {
+    content:'';
+    position: absolute;
+    width:100%;
+    background-color: #01869E;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+    filter: drop-shadow(0 0 15px black);
+    height: 48vw;
+    z-index: -1;
+  }
+
+.topcontainer {
+    display: flex;
+    padding: 6em;
+    height: 38vw;
+    
+}
+
+.photo {
+    display:flex;
+    justify-content: center;
+    background-image: url(./img/samoyed4.jpg);
+    background-size: cover;
+    width:100vw;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: space-between;
+    height: 28vw;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 30px;
+    max-width:50%;
+    margin-top:5px; 
+}
+
+.icon {
+    width: 50px;
+    float:right;
+    padding: 3px;
+}
+
+.headerabout {
+    font-size: calc(3vw + 1vh);
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.descr {
+    font-size: calc(1vw + 1vh);
+    font-weight: 300;
+    line-height:130%; 
+    overflow:hidden;
+}
+
+.name {
+    font-size: calc(4vw + 1vh);
+    color: #fff;
+    margin: 5px;
+    text-shadow:
+    3px 3px 0 #000,
+    -3px 3px 0 #000,
+    -3px -3px 0 #000,
+    3px -3px 0 #000;
+    align-self: flex-end;
+}
+
+.projects {
+    display: grid;
+    grid-template: 1fr 1fr/1fr 1fr 1fr;
+    gap: 50px;
+}
+
+.symbol {
+    width: 32px;
+    padding: 10px;
+}
+
+.myworkcontainer {
+    margin: 5%;
+}
+
+.pr1, .pr2, .pr3, .pr4, .pr5, .pr6 {
+    font-size: calc(3vw + 1vh);
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    text-wrap:wrap;
+    padding:15%;
+    box-shadow: 25px 0px 17px -28px rgba(0,0,0,0.45),
+-25px 0px 17px -28px rgba(0,0,0,0.45);
+}
+
+.pr1 {
+    background-color: rgb(140, 12, 12);
+}
+
+.pr2 {
+    background-color: rgb(133, 69, 133);
+}
+
+.pr3 {
+    background-color: rgb(82, 125, 82);
+}
+
+.pr4 {
+    background-color:rgb(152, 66, 81);
+}
+
+.pr5 {
+    background-color: rgb(225, 166, 57);
+}
+
+.pr6 {
+    background-color: rgb(64, 148, 176);
+}
+
+.prdescr {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    padding:5%;
+}
+
+.firstline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* flex: 1 1 auto; */
+    /* min-width: 0; */
+
+}
+
+.symbols {
+    display:flex;
+    flex-direction:row;
+    /* flex: 1 1 0; */
+    /* min-width: 0; */
+    /* width: fit-content; */
+    
+}
+    
+.prtext {
+    grid-column: 1/3;
+    font-size: calc(1.5vw + 1vh);
+    font-weight: 200;
+    padding: 10px;
+}
+
+.prname {
+    font-size: calc(2vw + 1vh);
+    padding: 10px;
+}
+
+.footer {
+    background-color: #01869E;
+    display: flex;
+    justify-content: space-around;
+}
+
+.left {
+    padding: 5% 0 5% 5%; 
+}
+
+.right {
+    margin: 5%;
+    background-image: url(./img/sanoyed2.jpg);
+    background-size: cover;
+    width:100vw;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+
+.contactme {
+    color: white;
+    font-size: 48px;
+    margin-bottom: 5px;
+    margin-top: 30px;
+    font-weight: 500;
+}
+
+.contacttext {
+    color: white;
+    font-size: calc(1.5vw + 1vh);
+    font-weight:200;
+    margin-top: 30px;
+    text-wrap: wrap; 
+
+}
+    
+.footer .icon {
+    margin-top: 25px;
+    margin-right:25px;
+    filter: invert(100%) sepia(16%) saturate(7463%) hue-rotate(222deg) brightness(119%) contrast(115%);
+}
+
+.phone,.email {
+    display:flex;
+}
+
+
+.footericons {
+    display:flex;
+    margin-top: 40px;
+    gap:10px;
+}
+
+.ficon {
+    width: 60px;
+}
+
+.topcontainer_tab
+{
+    display: none;
+}
+    
+@media (600px < width <= 1100px) {
+    .topcontainer {
+        
+        display: none;
+    }
+
+    .topcontainer_tab
+    {
+        display: block;
+
+    }
+
+    .tabphoto {
+        float:left;
+        width: 50%;
+        height: auto;
+        position:relative;
+        top:-100px; left:-8%;
+        z-index: 1;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .tabname {
+        font-size: calc(6vw + 1vh);
+        color: #fff;
+        text-shadow:
+        3px 3px 0 #000,
+        -3px 3px 0 #000,
+        -3px -3px 0 #000,
+        3px -3px 0 #000;
+        text-align: right;
+        margin: 5%;
+        position:relative;
+        top: 90px; left:-90px; 
+        z-index: 2;
+
+    }
+
+    .tababout {
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        margin:10%;
+        
+    }
+
+    .tabdescr {
+        font-size: calc(2vw + 1vh);
+        font-weight: 300;
+        margin-left:8%;
+        margin-right:5%;
+        position:relative;
+        top:-80px; left:-15px;
+    }
+
+    .tabheader {
+        font-size: calc(4vw + 1vh);
+        padding: 20px 0 40px 0;
+
+    }
+
+    .myworkcontainer {
+
+        margin:10%;
+    }
+
+    .projects{
+        grid-template: 1fr 1fr 1fr/ 1fr 1fr;
+    }
+}
+
+@media (width < 600px) {
+    .topcontainer {
+        flex-direction: column;
+        width:100%;
+        padding: 1%;
+        height: 200%;
+
+    }
+
+    .photo {
+        width: 80%;
+        min-height: 80vw;
+        align-self: center;
+        margin-top: 7%; 
+    }
+
+    .about {
+        height: fit-content;
+        max-width: 80%;
+        box-shadow: none;
+        align-items: center;
+    }
+
+
+    .descr {
+        font-size: calc(2vw + 1vh);
+    }
+
+    .icons {
+        display: flex;
+    }
+
+    .project {
+        padding: 5%;
+    }
+
+    .projects {
+        grid-template: 1fr 1fr 1fr 1fr 1fr 1fr/ 1fr;
+        gap: 10px;
+    }
+
+    .footer {
+        flex-direction: column;
+        height: max-content;
+    }
+
+    .footer .icon {
+        display: none;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacttext {
+        font-size: calc(3vw + 1vh);
+    }
+
+    .left {
+        padding: 5%;
+    }
+
+    .right {
+        height:100vw;
+        margin: 0;
+    }
+
+}
+    
+
